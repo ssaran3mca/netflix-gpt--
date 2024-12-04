@@ -1,5 +1,6 @@
 .header {
   position: absolute;
+  width: 100%;
   .h-logo img {
     width: 180px;
   }
@@ -13,4 +14,8 @@
   margin: 0 auto;
   background: #0000004d;
   padding: 41px;
+}
+
+.App .image-bg {
+  width: -webkit-fill-available;
 }

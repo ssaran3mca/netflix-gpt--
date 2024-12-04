@@ -6,6 +6,6 @@ export const checkValidata = (email, password) => {
       password
     );
   if (!isEmailValidate) return "Email ID is Not valid";
-  if (!isPasswordValidate) return "Email Password is Not valid";
-  return "success";
+  if (!isPasswordValidate) return "Password is Not valid";
+  return null;
 };
