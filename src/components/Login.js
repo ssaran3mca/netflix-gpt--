@@ -11,6 +11,7 @@ import { auth } from "../unitls/firebase";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addUser } from "../unitls/userSlice";
+import { IMGDETAILS, PHOTOURL } from "../unitls/constants";
 const Login = () => {
   const [isSignInFrom, setIsSignInFrom] = useState(true);
   const [message, setMessage] = useState("");
@@ -26,7 +27,6 @@ const Login = () => {
   const handleSubimit = () => {
     const message = checkValidata(email.current.value, password.current.value);
     setMessage(message);
-    console.log("testing up " + message);
 
     if (message) return;
 
@@ -41,8 +41,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL:
-              "https://do6gp1uxl3luu.cloudfront.net/banner+and+logos/name.webp",
+            photoURL: PHOTOURL,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -62,8 +61,6 @@ const Login = () => {
               setMessage(error.message);
               // ...
             });
-          console.log(user);
-          navigate("/brows");
           // ...
         })
         .catch((error) => {
@@ -82,8 +79,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate("/brows");
+          // console.log(user);
 
           // ...
         })
@@ -97,10 +93,7 @@ const Login = () => {
   return (
     <div className="App position-relative">
       <Header loginOut={isSignInFrom} />
-      <img
-        className="image-bg"
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/2bcf01ee-7ef6-4930-b0d5-c6863853c461/web/IN-en-20241125-TRIFECTA-perspective_a47db038-756f-4f26-b1f7-cfc882b98746_medium.jpg"
-      />
+      <img className="image-bg" src={IMGDETAILS} alt="bg" />
 
       <Form
         className="login-form text-white"

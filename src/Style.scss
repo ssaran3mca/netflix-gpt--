@@ -1,6 +1,7 @@
 .header {
   position: absolute;
-  width: 100%;
+  width: 99.1%;
+  // width: -webkit-fill-available;
   .h-logo img {
     width: 180px;
   }
@@ -18,4 +19,48 @@
 
 .App .image-bg {
   width: -webkit-fill-available;
+}
+.header-gpt {
+  position: relative;
+}
+.slider-main {
+  .slider-text {
+    position: absolute;
+    top: 35%;
+    left: 6%;
+    color: #ffffff;
+  }
+  .slider-video {
+  }
+}
+.moive-section {
+  img {
+    width: 100%;
+  }
+  .product-list {
+    display: flex; /* Align items in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 10px; /* Optional: Add space between items */
+    padding: 10px; /* Optional: Add padding around the list */
+    scrollbar-width: thin; /* Optional: Adjust scrollbar appearance (Firefox) */
+  }
+
+  .product-list::-webkit-scrollbar {
+    height: 8px; /* Adjust scrollbar height */
+  }
+
+  .product-list::-webkit-scrollbar-thumb {
+    background: #888; /* Customize scrollbar thumb color */
+    border-radius: 4px; /* Round scrollbar edges */
+  }
+
+  .product {
+    min-width: 200px; /* Set a fixed width for each item */
+    width: 124px;
+    flex-shrink: 0; /* Prevent items from shrinking */
+    background: #f4f4f4; /* Optional: Background color for items */
+    // padding: 10px; /* Optional: Padding inside each item */
+    border-radius: 5px; /* Optional: Rounded corners */
+    text-align: center; /* Center the content inside items */
+  }
 }
