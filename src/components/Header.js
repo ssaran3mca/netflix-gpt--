@@ -67,8 +67,8 @@ const Header = () => {
           {select && (
             <>
               <div className="d-flex justify-content-end p-3 ">
-                {gtpShow && (
-                  <select onChange={handleLangClick}>
+                {!gtpShow && (
+                  <select onChange={handleLangClick} className="me-2">
                     {LANG.map((lange) => (
                       <option key={lange.identifier} value={lange.identifier}>
                         {lange.name}

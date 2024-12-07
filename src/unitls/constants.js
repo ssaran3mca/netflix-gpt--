@@ -7,8 +7,7 @@ export const API_OPTION = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMGY3MDc0YTk2YTAzZDg4ZTY4NzBhNWIyMWM0MmVkNiIsIm5iZiI6MTY5NjUwNDg5NS41Mzc5OTk5LCJzdWIiOiI2NTFlOWMzZjViMTI0MDAwZTNkMmNkNTciLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.tBpyl5dRXbCC1LXH3qFZWhZQrPMYssaz0VYuShgJFRU",
+    Authorization: "Bearer " + process.env.REACT_APP_TMTB,
   },
 };
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w300/";
@@ -17,3 +16,8 @@ export const LANG = [
   { identifier: "tamil", name: "Tamil" },
   { identifier: "malayalam", name: "Malayalam" },
 ];
+
+export const REACT_APP_OPENAI_API_KEY = process.env.REACT_APP_OPENAI_KEY;
+export const REACT_KEY_G = "AIzaSyDhzxGppoAHedc3JRgXFYfDTFZyV4LlrNA";
+
+export const HUGGINGFACE = "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";

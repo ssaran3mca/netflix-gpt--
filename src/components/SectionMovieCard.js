@@ -1,6 +1,7 @@
 import { IMG_CDN_URL } from "../unitls/constants";
 
 const SectionMovieCard = ({ movies }) => {
+  if (!movies) return;
   // console.log(movies);
   return (
     <div className="product my-3">

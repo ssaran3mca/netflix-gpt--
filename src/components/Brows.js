@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 const Brows = () => {
   const nowPlayingMoview = useNowPlayingMovies(API_OPTION);
   const nowTvMoview = useTvMovies(API_OPTION);
+  console.log(nowTvMoview);
   const gtpShow = useSelector((store) => store.gpt.shwoGptSearch);
   // console.log(gtpShow);
   return (
